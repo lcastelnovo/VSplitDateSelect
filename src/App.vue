@@ -8,11 +8,12 @@ import VSplitDateSelect from './components/VSplitDateSelect.vue'
   </header>
 
   <main>
-    <div class="text">Inserisci una data: </div>
-    <br>
     <div class="datebox">
-      <VSplitDateSelect start="" @result="getResult"/>
-      <br><div class="text">{{ chosen_date }}</div>
+      <div class="text">Inserisci una data: </div>
+      <br>
+      
+        <VSplitDateSelect start="" @result="getResult"/>
+        <br><div class="text">{{ chosen_date }}</div>
     </div>
   </main>
 </template>
@@ -38,7 +39,9 @@ export default {
 <style scoped>
 
 .datebox{
-  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
   width: auto;
   min-width: 400px !important;
 }
